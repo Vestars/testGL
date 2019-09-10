@@ -17,7 +17,7 @@ public class EmployeeService {
 
     public Page<Employee> getEmployees(int page, int size){
         return employeeRepository.findAll(PageRequest.of(page - 1, size,
-                Sort.by(Sort.Direction.DESC,"id")));
+                Sort.by(Sort.Direction.ASC,"id")));
     }
 
     public Employee getEmployeeById(Long id){
