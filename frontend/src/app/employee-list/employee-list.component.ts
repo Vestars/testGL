@@ -25,6 +25,7 @@ export class EmployeeListComponent implements OnInit {
         if(this.Pageable && this.Pageable.pageNumber === page){
             return;
         }
+
         return this.restApi.getEmployees(page).subscribe((data) => {
             this.Pageable = data;
             this.Pages.length = data.totalPages;
