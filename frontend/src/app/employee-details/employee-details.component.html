@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row m-4">
+    <div class="alert alert-info w-100" role="alert" *ngIf="!Employee">
+      Employee not found!
+    </div>
+
+    <div class="col-md-12" *ngIf="Employee">
+      <h3 class="mb-3 text-center">Employee Info</h3>
+
+      <div class="col-md-12">
+        <table class="table table-bordered bg-light">
+          <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Computer type</th>
+            <th scope="col">Processor</th>
+            <th scope="col">Memory</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{Employee.id}}</td>
+            <td>{{Employee.name}}</td>
+            <td>{{Employee.computer.computerType}}</td>
+            <td>{{Employee.computer.processor}}</td>
+            <td>{{Employee.computer.memory}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-12 text-center">
+      <button class="btn btn-danger" (click)="goBack()">Go back</button>
+    </div>
+
+  </div>
+</div>
