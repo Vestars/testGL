@@ -19,7 +19,7 @@ public class MainController {
 
     @GetMapping("/employees")
     public Pageable<Employee> getEmployees(@RequestParam(value = "page", defaultValue = "1") int page,
-                                           @RequestParam(value = "size", defaultValue = "10") int size) {
+                                           @RequestParam(value = "size", defaultValue = "5") int size) {
         return Pageable.buildPageableResponse(employeeService.getEmployees(page, size));
     }
 

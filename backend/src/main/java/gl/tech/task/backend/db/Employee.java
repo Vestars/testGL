@@ -13,7 +13,7 @@ public class Employee {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "worksDays", nullable = false)
+    @Column(name = "works_days", nullable = false)
     private Integer worksDays;
 
     @OneToOne(cascade = CascadeType.ALL)
